@@ -150,3 +150,20 @@ header {
     border-radius: 4px;
     padding: 1px 13px;
 }
+
+.header__language-item a:not(.header__language-item--selected a):hover {
+    color: #c01111;
+}
+
+.banner {
+    position: relative;
+    padding-bottom: 40%;
+    overflow: hidden;
+}
+
+.banner video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
