@@ -13,6 +13,7 @@ a {
     background-color: transparent;
 }
 
+/* Header CSS */
 header {
     position: relative;
     max-width: 1140px;
@@ -155,6 +156,7 @@ header {
     color: #c01111;
 }
 
+/* Video Banner CSS */
 .banner {
     position: relative;
     padding-bottom: 40%;
@@ -185,6 +187,7 @@ header {
     width: 100%;
 }
 
+/* Business Section CSS */
 .business__heading {
     font-size: 40px;
     margin: 40px 0;
@@ -397,6 +400,7 @@ header {
     bottom: -85px;
 }
 
+/* Project Section CSS */
 .project {
     position: relative;
     display: flex;
@@ -746,3 +750,88 @@ header {
     max-width: 100%;
     margin: 0 auto;
 }
+
+/* Work Environment Section CSS */
+.work-env {
+    padding: 10px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.work-env__content-list {
+    width: 50%;
+}
+
+.work-env__heading {
+    margin-bottom: 20px;
+    font-size: 40px;
+    line-height: 1.5;
+}
+
+.work-env__list {
+    margin-top: 30px;
+}
+
+.work-env__list ul {
+    list-style: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0
+}
+
+.work-env__list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.work-env__list li:last-child {
+    margin-bottom: 0;
+}
+
+.work-env__icon-check {
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 6px solid #f9f9f9;
+    margin-right: 27px;
+}
+
+.work-env__icon-check i {
+    position: relative;
+    color: #c01111;
+    font-size: 45px;
+    font-weight: bold;
+    left: -2px;
+    top: -10px;
+    
+}
+
+.work-env__content {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.work-env__banner {
+    width: 50%;
+    margin-top: 65px;
+    position: relative;
+}
+
+.work-env__banner img {
+    height: auto;
+    max-width: 100%;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.work-env__btn {
+    position: absolute;
+    left: 48px;
+    right: 48px;
+    bottom: 48px;
+
