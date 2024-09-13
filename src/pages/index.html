@@ -11,44 +11,46 @@
 <body>
     <!-- Header -->
     <header class="header">
-        <div class="header__logo">
-            <a href="index.html">
-              <img src="../../assets/images/logo-sun@2x.png" alt="Sun* Inc. Logo"/>
-            </a>
-        </div>
-        <div class="header__nav-menu">
-            <nav class="header__nav">
-                <ul class="header__nav-list">
-                    <li class="header__nav-item header__nav-frist-item">
-                      <a href="/index.html" class="header__nav-a header__nav-a--selected">Trang chủ</a>
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="index.html">
+                <img src="../../assets/images/logo-sun@2x.png" alt="Sun* Inc. Logo"/>
+                </a>
+            </div>
+            <div class="header__nav-menu">
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item header__nav-frist-item">
+                        <a href="/index.html" class="header__nav-a header__nav-a--selected">Trang chủ</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#" class="header__nav-a">Về chúng tôi</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#" class="header__nav-a">Dự Án</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#" class="header__nav-a">Cơ hội nghề nghiệp</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#" class="header__nav-a">Môi trường làm việc</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#" class="header__nav-a">Tin tức</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__language">
+                <ul class="header__language-list">
+                    <li class="header__language-item header__language-item--selected">
+                        <a lang="vi" hreflang="vi" href="#">VI</a>
                     </li>
-                    <li class="header__nav-item">
-                        <a href="#" class="header__nav-a">Về chúng tôi</a>
-                    </li>
-                    <li class="header__nav-item">
-                        <a href="#" class="header__nav-a">Dự Án</a>
-                    </li>
-                    <li class="header__nav-item">
-                        <a href="#" class="header__nav-a">Cơ hội nghề nghiệp</a>
-                    </li>
-                    <li class="header__nav-item">
-                        <a href="#" class="header__nav-a">Môi trường làm việc</a>
-                    </li>
-                    <li class="header__nav-item">
-                        <a href="#" class="header__nav-a">Tin tức</a>
+                    <li class="header__language-item">
+                        <a lang="en-US" hreflang="en-US" href="#">EN</a>
                     </li>
                 </ul>
-            </nav>
-        </div>
-        <div class="header__language">
-            <ul class="header__language-list">
-                <li class="header__language-item header__language-item--selected">
-                    <a lang="vi" hreflang="vi" href="#">VI</a>
-                </li>
-                <li class="header__language-item">
-                    <a lang="en-US" hreflang="en-US" href="#">EN</a>
-                </li>
-            </ul>
+            </div>
         </div>
     </header>
     <!-- Video Banner Section -->
@@ -112,14 +114,14 @@
                     <ul>
                         <li>
                             <div class="project__number-wrap">
-                                <div class="project__number">200</div>
+                                <div class="project__number" data-from="0" data-to="200">200</div>
                                 <div class="project__plus">++</div>
                             </div>
                             <div class="project__title">Đối tác</div>
                         </li>
                         <li>
                             <div class="project__number-wrap">
-                                <div class="project__number">300</div>
+                                <div class="project__number" data-from="0" data-to="300">300</div>
                                 <div class="project__plus">++</div>
                             </div>
                             <div class="project__title">Dịch vụ được hỗ trợ</div>
@@ -139,6 +141,24 @@
                 <div class="project__carousel">
                     <ul class="project__carousel-list">
                         <li class="project__carousel-item">
+                            <img src="../../assets/images/Untitled-1-3.png" alt="Sun* Inc. Tuyển Dụng" class="project__carousel-img">
+                            <div class="project__carousel-content">
+                                <div class="project__carousel-sub-title">Công ty TNHH SSK</div>
+                                <h6 class="project__carousel-title">
+                                    <a href="#">  Dự án SSK  </a>
+                                </h6>
+                                <div class="project__carousel-description">
+                                    Thử thách để tiếp thêm năng lượng cho mọi người và xã hội với sports data.                              
+                                </div>
+                                <a href="#" class="project__carousel-btn">
+                                    Xem chi tiết
+                                    <span class="project__carousel-btn-icon">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="project__carousel-item">
                             <img src="../../assets/images/zenkigen_01.png" alt="Sun* Inc. Tuyển Dụng" class="project__carousel-img">
                             <div class="project__carousel-content">
                                 <div class="project__carousel-sub-title">Công ty TNHH ZENKIGEN</div>
@@ -156,10 +176,60 @@
                                 </a>
                             </div>
                         </li>
-                        <li class="project__carousel-item"></li>
-                        <li class="project__carousel-item"></li>
-                        <li class="project__carousel-item"></li>
-                        <li class="project__carousel-item"></li>
+                        <li class="project__carousel-item">
+                            <img src="../../assets/images/Kurashicom.png" alt="Sun* Inc. Tuyển Dụng" class="project__carousel-img">
+                            <div class="project__carousel-content">
+                                <div class="project__carousel-sub-title">Kurashicom Inc</div>
+                                <h6 class="project__carousel-title">
+                                    <a href="#"> Dự án KURASHICOM </a>
+                                </h6>
+                                <div class="project__carousel-description">
+                                    Phát triển App giúp hiện thực hóa phong cách sống theo ý muốn
+                                </div>
+                                <a href="#" class="project__carousel-btn">
+                                    Xem chi tiết
+                                    <span class="project__carousel-btn-icon">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="project__carousel-item">
+                            <img src="../../assets/images/Untitled-1-3.png" alt="Sun* Inc. Tuyển Dụng" class="project__carousel-img">
+                            <div class="project__carousel-content">
+                                <div class="project__carousel-sub-title">Công ty TNHH SSK</div>
+                                <h6 class="project__carousel-title">
+                                    <a href="#">  Dự án SSK  </a>
+                                </h6>
+                                <div class="project__carousel-description">
+                                    Thử thách để tiếp thêm năng lượng cho mọi người và xã hội với sports data.                              
+                                </div>
+                                <a href="#" class="project__carousel-btn">
+                                    Xem chi tiết
+                                    <span class="project__carousel-btn-icon">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="project__carousel-item">
+                            <img src="../../assets/images/zenkigen_01.png" alt="Sun* Inc. Tuyển Dụng" class="project__carousel-img">
+                            <div class="project__carousel-content">
+                                <div class="project__carousel-sub-title">Công ty TNHH ZENKIGEN</div>
+                                <h6 class="project__carousel-title">
+                                    <a href="#"> Dự án HARUTAKA </a>
+                                </h6>
+                                <div class="project__carousel-description">
+                                    “HARUTAKA” cho phép các công ty và người tìm việc có thể phỏng vấn trên web hoặc trong video bất kể thời gian hay địa điểm nào.
+                                </div>
+                                <a href="#" class="project__carousel-btn">
+                                    Xem chi tiết
+                                    <span class="project__carousel-btn-icon">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        </li>
                     </ul>
                     <button type="button" class="project__angle angle-slider angle-prev">
                         <i class="fa-solid fa-angle-left"></i>
@@ -239,10 +309,32 @@
             <div class="culture-event__container">
                 <div class="culture-event__slider">
                     <ul class="culture-event__news-list">
-                        
                         <li class="culture-event__news">
                             <div class="culture-event__img">
-                                <img src="../../assets/images/1f30a6d8-342c-4186-a9a0-d6190995cc81.webp" alt="">
+                                <img src="../../assets/images/f8e7e84c-29f1-4cbd-b2a3-263d42578a10.webp" alt="Sun* Inc. Tuyển Dụng">
+                            </div>
+                            <div class="culture-event__content">
+                                <h6 class="culture-event__title">
+                                    <a href="#">
+                                        Chinh phục chứng chỉ CKA 2024 cùng Hữu Kim (R&D): "Kịch tính và nhiều kinh nghiệm xương máu" 
+                                    </a>
+                                </h6>
+                                <p class="culture-event__description">
+                                    Sunner Hữu Kim (R&D) vừa trải qua hành trình thi chứng chỉ CKA (Certified Kubernetes Administrator) trong năm 2024. Nhắc đến cuộc thi này, kịch tính và nhiều bài học xương máu là những gì Kim ấn tượng nhất. CKA là một trong số 3 chứng chỉ phổ biến về Kubernetes bao gồm: CKAD, CKA và CKS. Hãy cùng theo dõi kinh nghiệm chinh phục chứng chỉ CKA của Hữu Kim ngay dưới đây!
+                                </p>
+                                <div class="culture-event__details">
+                                    <a href="#">
+                                        Xem chi tiết
+                                        <span class="culture-event__details-icon">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="culture-event__news">
+                            <div class="culture-event__img">
+                                <img src="../../assets/images/1f30a6d8-342c-4186-a9a0-d6190995cc81.webp" alt="Sun* Inc. Tuyển Dụng">
                                 <div class="culture-event__label">
                                     <span>Tin nóng</span>
                                 </div>
@@ -268,7 +360,7 @@
                         </li>
                         <li class="culture-event__news">
                             <div class="culture-event__img">
-                                <img src="../../assets/images/7c2f69b3-631b-4b2a-aabc-4eddf1bf8359.webp" alt="">
+                                <img src="../../assets/images/7c2f69b3-631b-4b2a-aabc-4eddf1bf8359.webp" alt="Sun* Inc. Tuyển Dụng">
                                 <div class="culture-event__label">
                                     <span>Tin nóng</span>
                                 </div>
@@ -315,6 +407,196 @@
                                 </div>
                             </div>
                         </li>
+                        <li class="culture-event__news">
+                            <div class="culture-event__img">
+                                <img src="../../assets/images/7d926be4-e8c6-4b1b-b4a8-e0ccf52f362b.webp" alt="Sun* Inc. Tuyển Dụng">
+                            </div>
+                            <div class="culture-event__content">
+                                <h6 class="culture-event__title">
+                                    <a href="#">
+                                        6 tháng cùng chiến lược “Toàn Sun* học tập và thực hành liên tục", chúng ta đã có những kết quả như thế nào? 
+                                    </a>
+                                </h6>
+                                <p class="culture-event__description">
+                                    Để nuôi dưỡng và phát triển mạnh mẽ văn hóa học tập, từ đó trở thành "Tổ chức học tập" (Learning Organization), 6 tháng qua, với chiến lược “Toàn Sun* học tập và thực hành liên tục", chúng ta đã có những kết quả học tập tích cực. Những kết quả này cho thấy hiệu quả của tính bài bản trong công tác triển khai, cùng tư duy bứt phá, phát triển bản thân không ngừng của người Sun*, đã và đang góp phần giúp chúng ta đi nhanh và xa hơn với các mục tiêu của mình.
+                                </p>
+                                <div class="culture-event__details">
+                                    <a href="#">
+                                        Xem chi tiết
+                                        <span class="culture-event__details-icon">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="culture-event__news">
+                            <div class="culture-event__img">
+                                <img src="../../assets/images/b8eab75a-a36f-4a25-82e6-8942a6ad62a3.webp" alt="Sun* Inc. Tuyển Dụng">
+                            </div>
+                            <div class="culture-event__content">
+                                <h6 class="culture-event__title">
+                                    <a href="#">
+                                        "Trình làng" server K8S cho các CEV thỏa sức thực hiện dự án nội bộ 
+                                    </a>
+                                </h6>
+                                <p class="culture-event__description">
+                                    Chỉ trong vòng 2 tháng, team dự án server K8s của IFU đã release thành công. Hiện các CEV tại Sun* đã có thể sử dụng server K8s để tối ưu nguồn lực server, phát huy sáng tạo, xây dựng và phát triển các công cụ nội bộ, từ đó khẳng định giá trị và gia tăng hiệu quả công việc tại Sun*.
+                                </p>
+                                <div class="culture-event__details">
+                                    <a href="#">
+                                        Xem chi tiết
+                                        <span class="culture-event__details-icon">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="culture-event__news">
+                            <div class="culture-event__img">
+                                <img src="../../assets/images/f8e7e84c-29f1-4cbd-b2a3-263d42578a10.webp" alt="Sun* Inc. Tuyển Dụng">
+                            </div>
+                            <div class="culture-event__content">
+                                <h6 class="culture-event__title">
+                                    <a href="#">
+                                        Chinh phục chứng chỉ CKA 2024 cùng Hữu Kim (R&D): "Kịch tính và nhiều kinh nghiệm xương máu" 
+                                    </a>
+                                </h6>
+                                <p class="culture-event__description">
+                                    Sunner Hữu Kim (R&D) vừa trải qua hành trình thi chứng chỉ CKA (Certified Kubernetes Administrator) trong năm 2024. Nhắc đến cuộc thi này, kịch tính và nhiều bài học xương máu là những gì Kim ấn tượng nhất. CKA là một trong số 3 chứng chỉ phổ biến về Kubernetes bao gồm: CKAD, CKA và CKS. Hãy cùng theo dõi kinh nghiệm chinh phục chứng chỉ CKA của Hữu Kim ngay dưới đây!
+                                </p>
+                                <div class="culture-event__details">
+                                    <a href="#">
+                                        Xem chi tiết
+                                        <span class="culture-event__details-icon">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="culture-event__news">
+                            <div class="culture-event__img">
+                                <img src="../../assets/images/1f30a6d8-342c-4186-a9a0-d6190995cc81.webp" alt="Sun* Inc. Tuyển Dụng">
+                                <div class="culture-event__label">
+                                    <span>Tin nóng</span>
+                                </div>
+                            </div>
+                            <div class="culture-event__content">
+                                <h6 class="culture-event__title">
+                                    <a href="#">
+                                        Hé lộ bộ tài liệu độc quyền siêu HOT và giải đáp toàn bộ thắc mắc kỹ thuật sau TechUp #2 
+                                    </a>
+                                </h6>
+                                <p class="culture-event__description">
+                                    “Tôi đã quẹt thẻ 10$ mua Copilot ngay trong phần chia sẻ thiết thực của diễn giả” - một lập trình viên đã tâm sự với BTC sau khi tham gia TechUp #2: “Ứng dụng AI để cải tiến hiệu suất lập trình và tạo ra sản phẩm đột phá” - sự kiện công nghệ “hosted by Sun*". Cùng Sun* News tìm hiểu kiến thức và truy cập bộ tài liệu "độc quyền" siêu HOT sau sự kiện!
+                                </p>
+                                <div class="culture-event__details">
+                                    <a href="#">
+                                        Xem chi tiết
+                                        <span class="culture-event__details-icon">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="culture-event__news">
+                            <div class="culture-event__img">
+                                <img src="../../assets/images/7c2f69b3-631b-4b2a-aabc-4eddf1bf8359.webp" alt="Sun* Inc. Tuyển Dụng">
+                                <div class="culture-event__label">
+                                    <span>Tin nóng</span>
+                                </div>
+                            </div>
+                            <div class="culture-event__content">
+                                <h6 class="culture-event__title">
+                                    <a href="#">
+                                        Nóng: Chính thức mở đăng ký TechUp #2 - Ứng dụng AI để cải tiến hiệu suất lập trình và tạo ra sản phẩm đột phá 
+                                    </a>
+                                </h6>
+                                <p class="culture-event__description">
+                                    Sau thành công vang dội của số đầu tiên vào năm 2023, TechUp - sự kiện công nghệ “hosted by Sun*” sẽ chính thức quay trở lại cùng phiên bản nâng cấp hơn vào tháng 6 này. Với mong muốn mang lại những giá trị ''awesome'', đồng hành cùng giới lập trình viên Việt phát triển bền vững giữa bối cảnh kỷ nguyên AI đang làm thay đổi lĩnh vực công nghệ, Sun* sẽ tổ chức số TechUp #2 với chủ đề "Ứng dụng AI để cải tiến hiệu suất lập trình và tạo ra sản phẩm đột phá" vào ngày 8/6 tới đây.
+                                </p>
+                                <div class="culture-event__details">
+                                    <a href="#">
+                                        Xem chi tiết
+                                        <span class="culture-event__details-icon">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="culture-event__news">
+                            <div class="culture-event__img">
+                                <img src="../../assets/images/0975f17b-89f3-4eab-a4fd-33b55df9d80d.webp" alt="Sun* Inc. Tuyển Dụng">
+                            </div>
+                            <div class="culture-event__content">
+                                <h6 class="culture-event__title">
+                                    <a href="#">
+                                        Dự án Insurance SaaS Development Support: Golang, VueJS trở thành “chất xúc tác” để Sunner vượt giới hạn 
+                                    </a>
+                                </h6>
+                                <p class="culture-event__description">
+                                    “Đề bài càng hóc búa, càng hấp dẫn để xông pha”, “Ngôn ngữ mới không phải rào cản, mà chính là cơ hội để chứng minh năng lực” là những câu cửa miệng các thành viên dự án Insurance SaaS liên tục nhấn mạnh khi được hỏi về cách chinh phục bài toán khó từ khách hàng và duy trì điểm CSS trên 90 suốt ba năm vận hành.
+                                </p>
+                                <div class="culture-event__details">
+                                    <a href="#">
+                                        Xem chi tiết
+                                        <span class="culture-event__details-icon">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="culture-event__news">
+                            <div class="culture-event__img">
+                                <img src="../../assets/images/7d926be4-e8c6-4b1b-b4a8-e0ccf52f362b.webp" alt="Sun* Inc. Tuyển Dụng">
+                            </div>
+                            <div class="culture-event__content">
+                                <h6 class="culture-event__title">
+                                    <a href="#">
+                                        6 tháng cùng chiến lược “Toàn Sun* học tập và thực hành liên tục", chúng ta đã có những kết quả như thế nào? 
+                                    </a>
+                                </h6>
+                                <p class="culture-event__description">
+                                    Để nuôi dưỡng và phát triển mạnh mẽ văn hóa học tập, từ đó trở thành "Tổ chức học tập" (Learning Organization), 6 tháng qua, với chiến lược “Toàn Sun* học tập và thực hành liên tục", chúng ta đã có những kết quả học tập tích cực. Những kết quả này cho thấy hiệu quả của tính bài bản trong công tác triển khai, cùng tư duy bứt phá, phát triển bản thân không ngừng của người Sun*, đã và đang góp phần giúp chúng ta đi nhanh và xa hơn với các mục tiêu của mình.
+                                </p>
+                                <div class="culture-event__details">
+                                    <a href="#">
+                                        Xem chi tiết
+                                        <span class="culture-event__details-icon">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="culture-event__news">
+                            <div class="culture-event__img">
+                                <img src="../../assets/images/b8eab75a-a36f-4a25-82e6-8942a6ad62a3.webp" alt="Sun* Inc. Tuyển Dụng">
+                            </div>
+                            <div class="culture-event__content">
+                                <h6 class="culture-event__title">
+                                    <a href="#">
+                                        "Trình làng" server K8S cho các CEV thỏa sức thực hiện dự án nội bộ 
+                                    </a>
+                                </h6>
+                                <p class="culture-event__description">
+                                    Chỉ trong vòng 2 tháng, team dự án server K8s của IFU đã release thành công. Hiện các CEV tại Sun* đã có thể sử dụng server K8s để tối ưu nguồn lực server, phát huy sáng tạo, xây dựng và phát triển các công cụ nội bộ, từ đó khẳng định giá trị và gia tăng hiệu quả công việc tại Sun*.
+                                </p>
+                                <div class="culture-event__details">
+                                    <a href="#">
+                                        Xem chi tiết
+                                        <span class="culture-event__details-icon">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                     <button class="culture-event__angle angle-slider angle-prev">
                         <i class="fa-solid fa-angle-left"></i>
@@ -334,6 +616,7 @@
             </div>
         </div>
     </main>
+    <!-- Footer  -->
     <footer class="footer">
         <div class="footer__section">
             <div class="footer__block">
@@ -416,7 +699,6 @@
             </div>
         </div>
         <hr>
-        <!-- Footer  -->
         <div class="footer__section">
             <div class="footer__block">
                 <a href="index.html">
@@ -427,21 +709,21 @@
                 <ul class="footer__list">
                     <li class="footer__item">
                         <p>@ 2021 Sun-asterisk. All rights reserved.</p>
-                    </li>
+                    </li class="footer__item">
                     <li>
                         <p>Giấy chứng nhận ĐKDN: 0106045931 do Sở KHĐT TP Hà Nội cấp lần đầu ngày 29/10/2012</p>
-                    </li>
+                    </li class="footer__item">
                     <li>
                         <p>Giấy phép hoạt động DVVL: 03/2022 do Sở LĐTBXH TP Hà Nội cấp lần đầu ngày 10/01/2022</p>
                     </li>
-                    <li>
+                    <li class="footer__item">
                         <p>Người đại diện theo pháp luật: KOBAYASHI TAIHEI - Tổng giám đốc</p>
                     </li>
                 </ul>
             </div>
             <div class="footer__block footer__social">
                 <ul class="footer__list">
-                    <li class="footer__item">
+                    <li>
                         <a href="#">
                             <i class="fa-brands fa-youtube"></i>
                         </a>
@@ -465,5 +747,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="../../assets/js/scripts.js"></script>
 </body>
 </html>
