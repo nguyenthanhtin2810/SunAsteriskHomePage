@@ -1230,6 +1230,11 @@ footer {
     background-color: rgba(0, 0, 0, 0.05);
     color: #494c4f;
     margin-left: auto;
+    display: none;
+}
+
+.header__dropdown-button i.active {
+    display: block;
 }
 
 .header__nav--mobile {
@@ -1532,10 +1537,6 @@ footer {
     
     .culture-event__slider .angle-next {
         right: 0;
-    }
-
-    .footer__item a {
-        font-size: 12px;
     }
 
     .footer__block--mobile {
