@@ -26,13 +26,23 @@ counters.forEach(counter => {
     observer.observe(counter);
 });
 
+// Get Width
+const getItemWidth = (sliderList) => {
+    const item = sliderList.querySelector('li');
+    const itemStyle = getComputedStyle(item);
+    const itemWidth = item.offsetWidth;
+    const marginLeft = parseFloat(itemStyle.marginLeft);
+    const marginRight = parseFloat(itemStyle.marginRight);
+    return itemWidth + marginLeft + marginRight;
+};
 // Slider function
 function updateSliderFunction(setup) {
-    const sliderList = document.querySelector(setup.sliderList)
+    const sliderList = document.querySelector(setup.sliderList);
+
     const updateSlider = () => {
         setup.isSliding = true;
         setup.translateX = -setup.currentIndex * setup.itemWidth
-        sliderList.style.transition = 'transform 0.5s';
+        sliderList.style.transition = 'transform 0.5s ease';
         sliderList.style.transform = `translate3d(${setup.translateX}px, 0px, 0px)`;
         setTimeout(() => {
             sliderList.style.transition = 'none';
@@ -50,13 +60,15 @@ function updateSliderFunction(setup) {
         }, 450);
     };
 
+    updateSlider();
+
     const autoSlide = setInterval(() => {
         if (!setup.isSliding) {
             setup.currentIndex++;
+            console.log(`${setup.itemWidth}`)
             updateSlider();
         }
     }, 3000);
-
     
     document.querySelector(`${setup.sliderofButton}.angle-next`).addEventListener('click', () => {
         if (!setup.isSliding) {
@@ -71,12 +83,17 @@ function updateSliderFunction(setup) {
             updateSlider();
         }
     });
+
+    window.addEventListener('resize', () => {
+        setup.itemWidth = getItemWidth(sliderList); 
+        updateSlider();
+    });
 }
 // Project Slider Set Up
 const setupProject = {
     sliderList: '.project__carousel-list',
-    itemWidth: 300,
     totalItems: 5,
+    itemWidth: getItemWidth(document.querySelector('.project__carousel-list')),
     showItems: 1,
     currentIndex: 1,
     translateX: 0,
@@ -88,12 +105,24 @@ updateSliderFunction(setupProject)
 // Culture event Slider Set Up
 const setupCuleve = {
     sliderList: '.culture-event__news-list',
-    itemWidth: 388,
     totalItems: 12,
+    itemWidth: getItemWidth(document.querySelector('.culture-event__news-list')),
     showItems: 3,
     currentIndex: 4,
     translateX: 0,
     isSliding: false,
     sliderofButton: '.culture-event__angle'
 }
-updateSliderFunction(setupCuleve)
+updateSliderFunction(setupCuleve) 
+
+// Dropdown button click
+const dropdownButton = document.querySelector('.header__dropdown-button');
+const navMenu = document.querySelector('.header__nav--mobile');
+
+dropdownButton.addEventListener('click', () => {
+    if (navMenu.classList.contains('dropdowning')) {
+        navMenu.classList.remove('dropdowning');
+    } else {
+        navMenu.classList.add('dropdowning');
+    }
+});
