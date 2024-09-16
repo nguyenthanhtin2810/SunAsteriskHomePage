@@ -17,7 +17,7 @@ const observer = new IntersectionObserver(entries => {
                 } else {
                     clearInterval(updateNumber);
                 }
-            }, 80);
+            }, 70);
         }
     });
 });
@@ -65,7 +65,6 @@ function updateSliderFunction(setup) {
     const autoSlide = setInterval(() => {
         if (!setup.isSliding) {
             setup.currentIndex++;
-            console.log(`${setup.itemWidth}`)
             updateSlider();
         }
     }, 3000);
@@ -116,19 +115,23 @@ const setupCuleve = {
 updateSliderFunction(setupCuleve) 
 
 // Dropdown button click
-const dropdownButton = document.querySelector('.header__dropdown-button');
+const dropdownButton = document.querySelectorAll('.header__dropdown-button .fa-solid');
 const navMenu = document.querySelector('.header__nav--mobile');
+dropdownButton.forEach(button => {
+    button.addEventListener('click', () => {
+        
+        dropdownButton.forEach(btn => {
+            btn.classList.add('active');
+        });
+        
+        button.classList.remove('active');
 
-dropdownButton.addEventListener('click', () => {
-    if (navMenu.classList.contains('dropdowning')) {
-        navMenu.classList.remove('dropdowning');
-        dropdownButton.querySelector('.fa-bars').classList.add('active');
-        dropdownButton.querySelector('.fa-x').classList.remove('active');
-    } else {
-        navMenu.classList.add('dropdowning');
-        dropdownButton.querySelector('.fa-bars').classList.remove('active');
-        dropdownButton.querySelector('.fa-x').classList.add('active');
-    }
+        if (navMenu.classList.contains('dropdowning')) {
+            navMenu.classList.remove('dropdowning');
+        } else {
+            navMenu.classList.add('dropdowning');
+        }
+    });
 });
 
 // Vn-En translator
@@ -182,9 +185,9 @@ const translator = {
             'Chúng tôi là ai?',
             'Chúng tôi làm gì?',
             'Cập nhật tin tức',
-            'Cập nhật tin tức',
+            // 'Cập nhật tin tức',
             'Liên hệ',
-            'Văn phòng',
+            // 'Văn phòng',
             'Văn phòng',
 
         ],
@@ -198,17 +201,17 @@ const translator = {
             'Văn hóa - Sự kiện',
             'Tuyển dụng',
             'Chính sách phúc lợi',
-            'Văn hóa - Sự kiện',
-            'Tuyển dụng',
-            'Chính sách phúc lợi',
+            // 'Văn hóa - Sự kiện',
+            // 'Tuyển dụng',
+            // 'Chính sách phúc lợi',
             'SĐT: 84-24-3795-5417',
             'Email: hr@sun-asterisk.com',
         ],
         '.footer__item p': [
-            'T13, Keangnam Hanoi Landmark Tower, khu E6, khu ĐTM Cầu Giấy, phường Mễ Trì, quận Nam Từ Liêm, Hà Nội',
-            'Tầng 4, tòa FHome Building, số 16 Lý Thường Kiệt, quận Hải Châu, Tp. Đà Nẵng',
-            `Tầng 9, L'Mak Long Tower, số 101-103 Nguyễn Cửu Vân, Phường 17, Quận Bình Thạnh, Thành phố Hồ Chí Minh.`,
-            'Văn phòng Tokyo - Văn phòng Cebu - Văn phòng Phnom Penh',
+            // 'T13, Keangnam Hanoi Landmark Tower, khu E6, khu ĐTM Cầu Giấy, phường Mễ Trì, quận Nam Từ Liêm, Hà Nội',
+            // 'Tầng 4, tòa FHome Building, số 16 Lý Thường Kiệt, quận Hải Châu, Tp. Đà Nẵng',
+            // `Tầng 9, L'Mak Long Tower, số 101-103 Nguyễn Cửu Vân, Phường 17, Quận Bình Thạnh, Thành phố Hồ Chí Minh.`,
+            // 'Văn phòng Tokyo - Văn phòng Cebu - Văn phòng Phnom Penh',
             'T13, Keangnam Hanoi Landmark Tower, khu E6, khu ĐTM Cầu Giấy, phường Mễ Trì, quận Nam Từ Liêm, Hà Nội',
             'Tầng 4, tòa FHome Building, số 16 Lý Thường Kiệt, quận Hải Châu, Tp. Đà Nẵng',
             `Tầng 9, L'Mak Long Tower, số 101-103 Nguyễn Cửu Vân, Phường 17, Quận Bình Thạnh, Thành phố Hồ Chí Minh.`,
@@ -267,9 +270,7 @@ const translator = {
             'Who are we?',
             'What do we do?',
             'Updated News',
-            'Updated News',
             'Contact',
-            'Office',
             'Office',
 
         ],
@@ -283,17 +284,10 @@ const translator = {
             'Culture - Events',
             'Recruitment',
             'Benefits and perks',
-            'Culture - Events',
-            'Recruitment',
-            'Benefits and perks',
             'Phone: 84-24-3795-5417',
             'Email: hr@sun-asterisk.com',
         ],
         '.footer__item p': [
-            'T13, Keangnam Hanoi Landmark Tower, Pham Hung, Nam Tu Liem, Hanoi',
-            '4F, FHome Building, 16 Ly Thuong Kiet Str., Hai Chau district, Da Nang',
-            `9th Floor, L'Mak Long Tower, 101-103 Nguyen Cuu Van, Ward 17, Binh Thanh District, Ho Chi Minh City`,
-            'Tokyo Office - Cebu Office - Phnom Penh Office',
             'T13, Keangnam Hanoi Landmark Tower, Pham Hung, Nam Tu Liem, Hanoi',
             '4F, FHome Building, 16 Ly Thuong Kiet Str., Hai Chau district, Da Nang',
             `9th Floor, L'Mak Long Tower, 101-103 Nguyen Cuu Van, Ward 17, Binh Thanh District, Ho Chi Minh City`,

@@ -59,7 +59,7 @@ header {
 
 .header__nav .header__nav-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -638,7 +638,7 @@ header {
 
 .project__angle {
     position: absolute;
-    bottom: -52px;
+    bottom: -70px;
 }
 
 .angle-slider {
@@ -821,7 +821,6 @@ header {
     font-weight: bold;
     left: -2px;
     top: -10px;
-    
 }
 
 .work-env__content {
@@ -1048,6 +1047,29 @@ header {
     text-align: center;
 }
 
+.fixed-btn {
+    right: 24px;
+    bottom: 124px;
+    position: fixed;
+    z-index: 9;
+}
+
+.fixed-btn-link {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 13px;
+    background-color: #c01111;
+    border: 8px solid #f9f9f9;
+    padding: 0;
+    border-radius: 50%;
+    display: inline-block;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    z-index: 1;
+}
+
 /* Footer CSS */
 footer {
     background-color: #f7f7f7;
@@ -1072,6 +1094,7 @@ footer {
 }
 
 .footer__sun-logo {
+    margin-top: 10px;
     height: auto;
     max-width: 60%;
     border: none;
@@ -1538,6 +1561,10 @@ footer {
     .culture-event__slider .angle-next {
         right: 0;
     }
+    
+    .footer__section {
+        display: block;
+    }
 
     .footer__block--mobile {
         display: block;
@@ -1548,23 +1575,31 @@ footer {
     }
 
     .footer__block {
-        width: 40%;
+        width: 100%;
     }
 
-    .footer__big-block {
-        width: 80%;
+    .footer__section {
+        display: block;
     }
 
-    .footer__block:first-child {
-        width: 20%;
+    .footer__block:not(.footer__copyright-section > *) {
+        box-sizing: border-box;
+    }
+
+    .footer__sun-logo {
+        max-width: 40%;
+    }
+
+    .footer__copyright-section {
+        display: flex;
+    }
+
+    .footer__copyright-section .footer__block:nth-child(1) {
+        width: 10%;
     }
 
     .footer__copyright-section .footer__block:nth-child(2) {
-        width: 80%;
-    }
-
-    .footer__copyright-section .footer__block:nth-child(3) {
-        width: 0;
+        width: 90%;
     }
 
     .footer__section:last-child .footer__social ul {
