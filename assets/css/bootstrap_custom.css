@@ -1,0 +1,134 @@
+body {
+    font-family: "Open Sans";
+    font-size: 14px;
+    color: #4d5969;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+/* Overide */
+@media (min-width: 1400px) {
+    .container, .container-lg, .container-md, 
+    .container-sm, .container-xl, .container-xxl {
+        max-width: 1140px;
+    }
+}
+
+.nav-link.active {
+    color: #fff;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    background-color: #c01111;
+    color: #fff;
+}
+
+.btn-link.active {
+    color: #c01111;
+    font-weight: 600;
+}
+
+.btn-link:hover {
+    color: #c01111 !important;
+}
+
+.btn-link {
+    font-size: 14px;
+}
+
+.bg-primary {
+    background-color: #c01111 !important;
+    color: #fff !important;
+}
+
+.bg-secondary {
+    background-color: #fff !important;
+    color: #4d5969 !important;
+}
+
+.text-primary {
+    color: #c01111 !important;
+}
+
+.text-dark {
+    color: #2b3441;
+}
+
+.border-primary {
+    border-color: #c01111 !important;
+}
+
+.btn-primary {
+    color: #c01111 !important;
+    background-color: #fff;
+    border-color: #c01111 !important;
+}
+
+.btn-light {
+    color: #c01111 !important;
+    background-color: #fff;
+    border-color: #fff !important;
+    font-weight: bold;
+}
+
+.btn-light:hover {
+    color: #fff !important;
+    background-color: #2b3441;
+    border-color: #2b3441 !important;
+    font-weight: bold;
+}
+
+.btn-dark {
+    color: #fff !important;
+    background-color: #2b3441;
+    border-color: #2b3441 !important;
+    font-weight: bold;
+}
+
+.btn-dark:hover {
+    color: #fff !important;
+    background-color: #c01111;
+    border-color: #fff !important;
+    font-weight: bold;
+}
+
+
+@media (min-width: 768px) {
+    .nav-link {
+        color: #433246;
+    }
+    
+    .nav-link.active {
+        color: #c01111 !important;
+        font-weight: 600;
+    }
+    
+    .nav-link:hover {
+        color: #c01111 !important;
+        background-color: #fff;
+    }
+}
+
+/* Custom */
+.pb-30-ps {
+    padding-bottom: 30%;
+}
+
+.px-6 {
+    padding-right: 6rem !important;
+    padding-left: 6rem !important;
+}
+
+.pt-6 {
+    padding-top: 6rem !important;
+}
+
+/* Header */
+.dropdown-button {
+    background-color: rgba(0, 0, 0, 0.05) !important;
+    border: none;
+    color: #494c4f !important;
+}
