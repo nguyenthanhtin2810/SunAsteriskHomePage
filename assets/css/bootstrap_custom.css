@@ -840,10 +840,88 @@ a {
 }
 
 /* Culture & event */
-#culture-event .carousel-item:hover {
+#culture-event .carousel-item > div:hover {
     border: 1px solid #e3e6e9;
 }
 
 #culture-event a:hover {
     color: #c01111;
+}
+
+/* Footer */
+.bg-footer .list-unstyled a:hover {
+    color: #4d5969;
+    text-decoration: underline !important;
+}
+
+/* Footer Icon Decoration */
+.fa-youtube::before {
+    position: relative;
+    left: 8px;
+}
+
+.fa-facebook-f::before {
+    position: relative;
+    left: 11px;
+}
+
+.fa-linkedin-in::before {
+    position: relative;
+    left: 10px;
+}
+
+.fa-youtube:hover {
+    background-color: #fff !important;
+    color: #ef3f45 !important;
+}
+
+.fa-facebook-f:hover , .fa-linkedin-in:hover{
+    background-color: #fff !important;
+    color: #136bcf !important;
+}
+
+/* Custom carousel */
+/* mobile */
+@media (max-width: 767px) {
+    #culeveCarousel .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    #culeveCarousel .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+
+    #culeveCarousel .carousel-inner .carousel-item-end.active {
+        transform: translateX(100%);
+    }
+
+    #culeveCarousel .carousel-inner .carousel-item-start.active {
+        transform: translateX(-100%);
+    }
+}
+#culeveCarousel .carousel-inner .carousel-item.active,
+#culeveCarousel .carousel-inner .carousel-item-next,
+#culeveCarousel .carousel-inner .carousel-item-prev {
+    display: flex;
+}
+/* destop */
+@media (min-width: 768px) {
+    #culeveCarousel .carousel-inner .carousel-item-end.active,
+    #culeveCarousel .carousel-inner .carousel-item-next {
+        transform: translateX(33.33%);
+    }
+
+    #culeveCarousel .carousel-inner .carousel-item-start.active, 
+    #culeveCarousel .carousel-inner .carousel-item-prev {
+        transform: translateX(-33.33%);
+    }
+
+    #culeveCarousel .carousel-inner .carousel-item-next > div:not(:last-child) *,
+    #culeveCarousel .carousel-inner .carousel-item-prev > div:not(:first-child) * {
+        display: none;
+    }
+}
+
+#culeveCarousel .carousel-inner .carousel-item-end,
+#culeveCarousel .carousel-inner .carousel-item-start { 
+    transform: translateX(0);
 }
